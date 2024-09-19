@@ -1,0 +1,128 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the gallery */
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  max-width: 1200px;
+  border: 8px solid #0077b6;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the gallery heading */
+.gallery-heading {
+  font-size: 48px;
+  color: #0077b6;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #0077b6, #0096c7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Styling for the image gallery container */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: linear-gradient(135deg, #caf0f8, #90e0ef);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Thumbnail images */
+.gallery img.thumbnail {
+  margin: 15px;
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 12px;
+  border: 5px solid #0077b6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #00b4d8;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Lightbox content */
+.lightbox-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.lightbox img.lightbox-image {
+  display: none;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+  border: 8px solid #00b4d8;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Close button */
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Previous/Next buttons */
+.lightbox .prev, .lightbox .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.lightbox .prev {
+  left: 10px;
+}
+
+.lightbox .next {
+  right: 10px;
+}
+
+.lightbox .prev:hover, .lightbox .next:hover {
+  color: #f1f1f1;
+}
